@@ -152,7 +152,6 @@ class SportsRegressor:
         - MAE (Mean Absolute Error)
         - R² Score
         - Explained Variance
-        - Feature Importance (model-specific)
         
         Returns:
             Dict: Dictionary containing evaluation metrics
@@ -178,22 +177,6 @@ class SportsRegressor:
                 'R²': r2_score(y_test, y_pred),
                 'Explained Variance': self.model.score(self.X_test, self.y_test)
             }
-            
-            # Add feature importance based on model type
-            if isinstance(self.model, LinearRegression):
-                # Calculate standardized coefficients for linear regression
-                std_coef = self.model.coef_ * np.std(self.X_train, axis=0)
-                self.metrics['Feature Importance'] = dict(zip(
-                    self.feature_names,
-                    std_coef
-                ))
-            elif isinstance(self.model, RandomForestRegressor):
-                # Get feature importance from random forest
-                importance = self.model.feature_importances_
-                self.metrics['Feature Importance'] = dict(zip(
-                    self.feature_names,
-                    importance
-                ))
                 
             return self.metrics
         except Exception as e:

@@ -344,8 +344,7 @@ app.layout = dbc.Container([
                         html.Small("Example questions:", className="text-muted"),
                         dbc.Badge("Show me data summary", color="secondary", className="ml-2"),
                         dbc.Badge("What's my model accuracy?", color="secondary", className="ml-2"),
-                        dbc.Badge("Show feature importance", color="secondary", className="ml-2"),
-                        dbc.Badge("Help with visualization", color="secondary", className="ml-2")
+                        dbc.Badge("visualization", color="secondary", className="ml-2")
                     ], className="d-flex flex-wrap gap-2")
                 ])
             ], className="mt-4 mb-4 shadow", style={'backgroundColor': custom_styles['card']})

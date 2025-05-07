@@ -70,10 +70,6 @@ class SportsChatbot:
    - Try different color schemes to find the most effective visualization
    - The colorbar shows the scale of your Y-axis values
 
-Need more help? Try these example queries:
-- "What chart type should I use for time series data?"
-- "Which color scheme is best for continuous data?"
-- "How do I create a scatter plot?"
 - "What does the colorbar show?" """,
             "model help": "For model help, consider these points:\n1. Choose a target variable that you want to predict\n2. Select relevant features that might influence the target\n3. Check model metrics to evaluate performance",
             "data quality": self.get_data_quality_report
